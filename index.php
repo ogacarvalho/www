@@ -25,18 +25,28 @@
     $sql = "SELECT * FROM usuarios";
     $result = $pdo->query($sql);
 
-    if ($result->rowCount() > 0) {
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    if (!$result) {
+        // Se houve um erro, exiba a mensagem de erro
+        echo "Erro: " . $pdo->errorInfo()[2];
+    } else {
+           // Se a consulta foi bem-sucedida
+         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             echo "<div>";
             echo "Nome: " . $row['nome'] . "<br>";
-            echo "Email: " . $row['email'];
-            echo " <a href='php/update.php?id=" . $row['id'] . "'>Editar</a>";
-            echo " <a href='php/delete.php?id=" . $row['id'] . "'>Deletar</a>";
+            echo "Email: " . $row['email'] . "<br>";
+            
+            echo "<form method='post' action='php/update.php'>";
+            echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
+            echo "<input type='submit' value='Editar'>";
+            echo "</form>";
+
+            echo "<form method='post' action='php/delete.php'>";
+            echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
+            echo "<input type='submit' value='Deletar' onclick='return confirm(\"Tem certeza que deseja excluir este usuário?\")'>";
+            echo "</form>";
             echo "</div>";
-        }
-    } else {
-        echo "Nenhum usuário encontrado.";
     }
+    };
     ?>
 </body>
 </html>
