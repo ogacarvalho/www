@@ -5,48 +5,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Simples</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Inclua o CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+        }
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+        }
+        .form-signin .checkbox {
+            font-weight: 400;
+        }
+        .form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>CRUD Simples</h1>
 
-    <!-- Formulário para adicionar novo usuário -->
-    <form method="POST" action="php/create.php">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <button type="submit">Adicionar</button>
-    </form>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form class="form-signin" action="php/login.php" method="post">
+                <h1 class="h3 mb-3 font-weight-normal text-center">Por favor, faça login</h1>
+                <label for="inputEmail" class="sr-only">Endereço de email</label>
+                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Endereço de email" required autofocus>
+                <label for="inputPassword" class="sr-only">Senha</label>
+                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Senha" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+                <p class="mt-5 mb-3 text-muted text-center">&copy; 2024</p>
+            </form>
+        </div>
+    </div>
+</div>
 
-    <!-- Listar usuários -->
-    <h2>Usuários</h2>
-    <?php
-    $sql = "SELECT * FROM usuarios";
-    $result = $pdo->query($sql);
-
-    if (!$result) {
-        // Se houve um erro, exiba a mensagem de erro
-        echo "Erro: " . $pdo->errorInfo()[2];
-    } else {
-           // Se a consulta foi bem-sucedida
-         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            echo "<div>";
-            echo "Nome: " . $row['nome'] . "<br>";
-            echo "Email: " . $row['email'] . "<br>";
-            
-            echo "<form method='post' action='php/update.php'>";
-            echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
-            echo "<input type='submit' value='Editar'>";
-            echo "</form>";
-
-            echo "<form method='post' action='php/delete.php'>";
-            echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
-            echo "<input type='submit' value='Deletar' onclick='return confirm(\"Tem certeza que deseja excluir este usuário?\")'>";
-            echo "</form>";
-            echo "</div>";
-    }
-    };
-    ?>
+<!-- Inclua o JavaScript do Bootstrap e suas dependências -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
