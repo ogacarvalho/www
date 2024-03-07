@@ -53,7 +53,7 @@
     <div class="row">
         <div class="col">
             <form class="form-signin" action="php/login.php" method="post">
-                <h1 class="h3 mb-3 font-weight-normal text-center">Por favor, faça login</h1>
+                <h1 class="h3 mb-3 font-weight-normal text-center">Login</h1>
                 <label for="inputEmail" class="sr-only">Endereço de email</label>
                 <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Endereço de email" required autofocus>
                 <label for="inputPassword" class="sr-only">Senha</label>

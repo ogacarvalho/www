@@ -70,11 +70,11 @@
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img src="../img/3.jpg" class="d-block img-fluid" alt="Descrição da Imagem 1">
+                <img src="../img/1.jpg" class="d-block img-fluid" alt="Descrição da Imagem 1">
             </div>
             <!-- Slide 2 -->
             <div class="carousel-item">
-                <img src="../img/1.jpg" class="d-block img-fluid" alt="Descrição da Imagem 2">
+                <img src="../img/3.jpg" class="d-block img-fluid" alt="Descrição da Imagem 2">
             </div>
             <!-- Slide 3 -->
             <div class="carousel-item">
@@ -104,15 +104,15 @@
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img src="../img/3.jpg" class="d-block img-fluid" alt="Descrição da Imagem 1">
+                <img src="../img/1.jpg" class="d-block img-fluid" alt="Descrição da Imagem 1">
             </div>
             <!-- Slide 2 -->
             <div class="carousel-item">
-                <img src="../img/1.jpg" class="d-block img-fluid" alt="Descrição da Imagem 2">
+                <img src="../img/2.jpg" class="d-block img-fluid" alt="Descrição da Imagem 2">
             </div>
             <!-- Slide 3 -->
             <div class="carousel-item">
-                <img src="../img/2.jpg" class="d-block img-fluid" alt="Descrição da Imagem 3">
+                <img src="../img/3.jpg" class="d-block img-fluid" alt="Descrição da Imagem 3">
             </div>
         </div>
         <!-- Controls -->
