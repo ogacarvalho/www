@@ -61,20 +61,14 @@
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <img src="../img/3.jpg" class="d-block img-fluid" alt="Descrição da Imagem 1">
-                <div class="circle" onclick="showDescription(this)"></div>
-                <div class="description-box">Pessoas felizes</div>
             </div>
             <!-- Slide 2 -->
             <div class="carousel-item">
                 <img src="../img/1.jpg" class="d-block img-fluid" alt="Descrição da Imagem 2">
-                <div class="circle" onclick="showDescription(this)"></div>
-                <div class="description-box">José e sua familia</div>
             </div>
             <!-- Slide 3 -->
             <div class="carousel-item">
                 <img src="../img/2.jpg" class="d-block img-fluid" alt="Descrição da Imagem 3">
-                <div class="circle" onclick="showDescription(this)"></div>
-                <div class="description-box">Um belo jardim</div>
             </div>
         </div>
         <!-- Controls -->
@@ -109,20 +103,38 @@ function showDescription(circle) {
 function addCircle(event, carouselItem) {
     var xPos = event.offsetX;
     var yPos = event.offsetY;
-    console.log(xPos);
-    console.log(yPos);
+
+    var userText = prompt("Por favor, insira sua frase personalizada para esta imagem:", "Descrição da imagem");
+    if (userText === null || userText === "") {
+        // Se o usuário cancelar ou não inserir texto, não adicione o círculo.
+        return;
+    }
 
     var circle = document.createElement('div');
     circle.className = 'circle';
     circle.style.left = xPos + 'px';
     circle.style.top = yPos + 'px';
 
-    // Aqui você pode definir o que acontece quando o círculo é clicado
+    var descriptionBox = document.createElement('div');
+    descriptionBox.className = 'description-box';
+    descriptionBox.style.display = 'none'; // Inicialmente escondido
+    descriptionBox.textContent = userText; // Adicionando o texto inserido pelo usuário
+
+    // Posicionando a caixa de descrição próximo ao círculo
+    // Você pode ajustar os valores para obter o posicionamento desejado
+    descriptionBox.style.left = (xPos + 50) + 'px'; // Posiciona a descrição à direita do círculo
+    descriptionBox.style.top = yPos + 'px'; // Alinha verticalmente com o círculo
+
     circle.onclick = function() {
-        showDescription(this);
+        if (descriptionBox.style.display === "none") {
+            descriptionBox.style.display = "block";
+        } else {
+            descriptionBox.style.display = "none";
+        }
     };
 
     carouselItem.appendChild(circle);
+    carouselItem.appendChild(descriptionBox); // Adicionando a descrição ao carousel item
 
     // Desabilitar o clique adicional na imagem
     carouselItem.querySelector('img').onclick = null;
