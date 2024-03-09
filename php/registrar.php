@@ -10,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Log dos dados recebidos do formulário
     error_log("Dados do formulário recebidos: Nome: $nome, Email: $email, Senha: $senha, Tipo de Usuário: $tipoUsuario");
 
-    $sql = "INSERT INTO usuarios (nome, email, senha, tipo_usuario) VALUES (?, ?, ?, 0)";
+    $sql = "INSERT INTO usuarios (nome, email, senha, tipo_usuario) VALUES (?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$nome, $email, $senha]);
+    $stmt->execute([$nome, $email, $senha, $tipoUsuario]);
 
     // Verifica se a inserção foi bem-sucedida
     if ($stmt->rowCount() > 0) {

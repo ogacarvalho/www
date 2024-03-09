@@ -3,8 +3,6 @@ session_start();
 
 include 'conexao.php'; // Inclui o arquivo de conexão
 
-
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'] ?? '';
     $senha = $_POST['password'] ?? '';
@@ -21,17 +19,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Usuário encontrado
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nome'] = $usuario['nome'];
+            $_SESSION['tipo_usuario'] = $usuario['tipo_usuario'];
             // Redireciona para a página desejada após o login
             header('Location: ./carroussel.php');
             exit;
         } else {
             // Usuário não encontrado ou senha incorreta
-            $_SESSION['erro_login'] = 'E-mail ou senha incorretos.';
+            $_SESSION['erro_login'] = 'E-mail, senha ou tipo de usuário incorretos.';
             header('Location: ./login.php');
             exit;
         }
     } else {
-        // E-mail ou senha não preenchidos
+        // E-mail, senha ou tipo de usuário não preenchidos
         $_SESSION['erro_login'] = 'Preencha todos os campos.';
         header('Location: ../index.php');
         exit;

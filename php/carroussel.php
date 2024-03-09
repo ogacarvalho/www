@@ -81,10 +81,16 @@
             <span class="sr-only">Próximo</span>
         </a>
     </div>
+    <?php
+        session_start();
+        $mostrarAdicionarCirculo = isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 1;
+    ?>
     <div class="like-dislike-buttons">
-    <button type="button" class="btn btn-outline-primary">Like</button>
-    <button type="button" class="btn btn-outline-secondary">Dislike</button>
-    <button type="button" class="btn btn-outline-info" onclick="enableCircleAdding(this)">Adicionar Círculo</button>
+        <button type="button" class="btn btn-outline-primary">Like</button>
+        <button type="button" class="btn btn-outline-secondary">Dislike</button>
+        <?php if ($mostrarAdicionarCirculo): ?>
+            <button type="button" class="btn btn-outline-info" onclick="enableCircleAdding(this)">Adicionar Círculo</button>
+        <?php endif; ?>
     </div>
 </div>
 
