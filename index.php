@@ -81,7 +81,6 @@
     <div id="registerForm" class="row" style="display: none;">
         <div class="col">
             <form class="form-signin" action="php/registrar.php" method="post">
-                <h1 class="h3 mb-3 font-weight-normal text-center">Cadastro</h1>
                 <label for="inputName" class="sr-only">Nome completo</label>
                 <input type="text" id="inputName" name="nome" class="form-control" placeholder="Nome completo" required autofocus>
                 <label for="inputName" class="sr-only">E-mail</label>
@@ -110,7 +109,7 @@
         <input type="radio" name="formToggle" id="registerToggle" onclick="toggleForm(false)">
         <label for="registerToggle">Cadastrar</label>
     </div>
-    <p class="mt-5 mb-3 text-muted text-center">&copy; 2024</p>
+    <p class="mt-5 mb-3 text-muted text-center">Além da Visão &copy; 2024</p>
 </div>
 
 

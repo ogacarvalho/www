@@ -71,12 +71,100 @@
         <div class="carousel-inner">    
             <div class="carousel-item active">
                 <img src="../img/3.jpg" class="d-block img-fluid" alt="Descrição da Imagem 1">
+                <div class="circle" style="top: 100px; left: 150px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 150px; left: 210px;">Descrição aqui</div>
             </div>
             <div class="carousel-item">
                 <img src="../img/1.jpg" class="d-block img-fluid" alt="Descrição da Imagem 2">
+                <div class="circle" style="top: 50px; left: 200px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 100px; left: 260px;">Descrição aqui</div>
             </div>
             <div class="carousel-item">
                 <img src="../img/2.jpg" class="d-block img-fluid" alt="Descrição da Imagem 3">
+                <div class="circle" style="top: 150px; left: 100px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 200px; left: 160px;">Descrição aqui</div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#imageFeed_1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#imageFeed_1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    <?php
+        session_start();
+        $mostrarAdicionarCirculo = isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 1;
+    ?>
+    <div class="like-dislike-buttons">
+        <button type="button" class="btn btn-outline-primary">Like</button>
+        <button type="button" class="btn btn-outline-secondary">Dislike</button>
+        <?php if ($mostrarAdicionarCirculo): ?>
+            <button type="button" class="btn btn-outline-info" onclick="enableCircleAdding(this)">Adicionar Círculo</button>
+        <?php endif; ?>
+    </div>
+</div>
+<div class="container mt-3">
+    <div id="imageFeed_1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">    
+            <div class="carousel-item active">
+                <img src="../img/3.jpg" class="d-block img-fluid" alt="Descrição da Imagem 1">
+                <div class="circle" style="top: 100px; left: 150px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 150px; left: 210px;">Descrição aqui</div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/1.jpg" class="d-block img-fluid" alt="Descrição da Imagem 2">
+                <div class="circle" style="top: 50px; left: 200px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 100px; left: 260px;">Descrição aqui</div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/2.jpg" class="d-block img-fluid" alt="Descrição da Imagem 3">
+                <div class="circle" style="top: 150px; left: 100px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 200px; left: 160px;">Descrição aqui</div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#imageFeed_1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#imageFeed_1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    <?php
+        session_start();
+        $mostrarAdicionarCirculo = isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 1;
+    ?>
+    <div class="like-dislike-buttons">
+        <button type="button" class="btn btn-outline-primary">Like</button>
+        <button type="button" class="btn btn-outline-secondary">Dislike</button>
+        <?php if ($mostrarAdicionarCirculo): ?>
+            <button type="button" class="btn btn-outline-info" onclick="enableCircleAdding(this)">Adicionar Círculo</button>
+        <?php endif; ?>
+    </div>
+</div>
+<div class="container mt-3">
+    <div id="imageFeed_1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">    
+            <div class="carousel-item active">
+                <img src="../img/3.jpg" class="d-block img-fluid" alt="Descrição da Imagem 1">
+                <div class="circle" style="top: 100px; left: 150px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 150px; left: 210px;">Descrição aqui</div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/1.jpg" class="d-block img-fluid" alt="Descrição da Imagem 2">
+                <div class="circle" style="top: 50px; left: 200px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 100px; left: 260px;">Descrição aqui</div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/2.jpg" class="d-block img-fluid" alt="Descrição da Imagem 3">
+                <div class="circle" style="top: 150px; left: 100px;" onclick="event.stopPropagation(); showDescription(this);"></div>
+                <div class="description-box" style="top: 200px; left: 160px;">Descrição aqui</div>
             </div>
         </div>
 
