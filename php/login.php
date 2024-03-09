@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include 'conexao.php'; // Inclui o arquivo de conexão
+include 'conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'] ?? '';
@@ -16,27 +16,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($usuario) {
-            // Usuário encontrado
+            
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nome'] = $usuario['nome'];
             $_SESSION['tipo_usuario'] = $usuario['tipo_usuario'];
-            // Redireciona para a página desejada após o login
+            
             header('Location: ./carroussel.php');
             exit;
         } else {
-            // Usuário não encontrado ou senha incorreta
+            
             $_SESSION['erro_login'] = 'E-mail, senha ou tipo de usuário incorretos.';
             header('Location: ./login.php');
             exit;
         }
     } else {
-        // E-mail, senha ou tipo de usuário não preenchidos
+        
         $_SESSION['erro_login'] = 'Preencha todos os campos.';
         header('Location: ../index.php');
         exit;
     }
 } else {
-    // Método não é POST
+    
     header('Location: login.php');
     exit;
 }

@@ -59,13 +59,15 @@
 </head>
 <body onload="toggleForm(true)">
 
-<div class="container">
+<div class="container text-center">
+    <div class="mb-4">
+        <img src="/img/logo.png" alt="Logo" class="mb-4">
+    </div>
 
     <!-- Formulário de Login -->
     <div id="loginForm" class="row">
         <div class="col">
         <form class="form-signin" action="php/login.php" method="post">
-                <h1 class="h3 mb-3 font-weight-normal text-center">Login</h1>
                 <label for="inputEmail" class="sr-only">Endereço de email</label>
                 <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Endereço de email" required autofocus>
                 <label for="inputPassword" class="sr-only">Senha</label>
@@ -112,7 +114,6 @@
 </div>
 
 
-<!-- Inclua o JavaScript do Bootstrap e suas dependências -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
