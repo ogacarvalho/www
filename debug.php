@@ -34,12 +34,7 @@ function normalizePath($path)
     return implode('/', $parts);
 }
 
-$path_sqlite = realpath(normalizePath("../database/banco.db"));
+$path_sqlite = "../database/banco.db";
 
-try {
-    $pdo = new PDO("sqlite:".$path_sqlite);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Não foi possível conectar ao banco de dados: " . $e->getMessage());
-}
+echo($path_sqlite);
 ?>
