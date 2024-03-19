@@ -96,11 +96,18 @@ Após clonar o repositório e configurar o ambiente, execute o UWAMP. Verifique 
 
 ## 📒Como Usar/Funcionalidade 
 
+A aplicação consiste em auxiliar pessoas com visão subnormal, através de colaboração em comunidade virtual com uso de imagens, texto e audios, enviados e recebidos. Através de uma loja de aplicativos seja Android ou Ios é necessario realizar o download e instalação do App no Smartphone. Feito isso siga os seguintes passos: 
  
 
+- [x] Cadastro de Usuarios 
+
+- [x] Login 
+
+- [x] Descrever Imagens 
+
+- [x] Receber Resultados 
 
 
- 
 
 ## 📲Layout
 
