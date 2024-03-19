@@ -120,6 +120,11 @@ Após clonar o repositório e configurar o ambiente, execute o UWAMP. Verifique 
  
 
 ## 🛠Tecnologias Utilizadas
+1. Figma](https://www.figma.com/proto/9KyGzx7IiFnoJNYtRGQwoc/App%3A-Al%C3%A9m-da-Vis%C3%A3o?type=design&node-id=29-1204&t=RzATpEwOtVH4TThU-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A5)
+
+2. [Vs.Code](https://www.bing.com/ck/a?!&&p=8ea535fa4cfed80aJmltdHM9MTcxMDcyMDAwMCZpZ3VpZD0wYjc0YTIzYi04M2VlLTYyMmItMTcxMC1iMTljODJjNDYzZWImaW5zaWQ9NTUzMA&ptn=3&ver=2&hsh=3&fclid=0b74a23b-83ee-622b-1710-b19c82c463eb&psq=vs+code&u=a1aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20vRG93bmxvYWQ&ntb=1)
+
+3. Linguagens Php, HTML, MySql, Css
 
 
 ## ☎️Contato - Pessoas Autoras
